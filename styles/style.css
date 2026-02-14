@@ -175,6 +175,34 @@ ul, ol {
   gap: 14px;
 }
 
+.paginacao-receitas {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.botao-paginacao {
+  border: 1px solid var(--azul-suave);
+  background: #fff;
+  color: var(--azul-escuro);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-paginacao:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.info-paginacao {
+  color: var(--azul-medio);
+  font-weight: 600;
+}
+
 .card-receita {
   border: 1px solid var(--fundo-claro);
   border-radius: 12px;
@@ -284,6 +312,11 @@ footer {
 
   .grade-receitas {
     grid-template-columns: 1fr;
+  }
+
+  .paginacao-receitas {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .card-receita-imagem {

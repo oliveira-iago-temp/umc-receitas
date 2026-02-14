@@ -44,6 +44,7 @@ body {
 .marca-site {
   display: flex;
   align-items: center;
+  gap: 10px;
   padding: 8px 0;
 }
 
@@ -246,11 +247,25 @@ footer {
 @media (max-width: 480px) {
   .marca-site {
     padding: 12px 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+
+  .espaco-logo {
+    width: 78px;
+  }
+
+  .nome-site-link {
+    font-size: 1.05rem;
   }
 
   .botao-voltar {
-    margin-left: 0;
+    margin-left: auto;
+    margin-top: 0;
+    flex-basis: auto;
+    width: auto;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
 
   .card {

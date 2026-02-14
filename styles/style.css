@@ -1,0 +1,292 @@
+/* Paleta principal de cores do site pra facilirtar manutencao*/
+:root {
+  --fundo-claro: #dce4ea;
+  --superficie-branca: #ffffff;
+  --azul-escuro: #053e7d;
+  --azul-medio: #5d83aa;
+  --azul-claro: #7ca4c2;
+  --azul-suave: #7a9cc4;
+}
+
+/* Garante que padding e border nao quebrem o tamanho dos elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo base */
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #fffdf9 0%, var(--fundo-claro) 100%);
+  color: var(--azul-escuro);
+  font-size: clamp(15px, 1.2vw, 17px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* centraliza na tela */
+.container {
+  width: min(920px, 92%);
+  margin: 0 auto;
+}
+
+/* Faixa no header */
+.topo-site {
+  background: var(--superficie-branca);
+  border-bottom: 1px solid var(--fundo-claro);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* parte que tem o logo, nome e botao de voltar */
+.marca-site {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.espaco-logo {
+  width: 85px;
+  object-fit: contain;
+}
+
+.nome-site-link {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  color: var(--azul-escuro);
+  text-decoration: none;
+}
+
+.botao-voltar {
+  margin-left: auto;
+  text-decoration: none;
+  color: var(--azul-escuro);
+  border: 1px solid var(--azul-suave);
+  background: #fff;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 600;
+}
+
+.botao-voltar:hover {
+  border-color: var(--azul-medio);
+  background: var(--fundo-claro);
+}
+
+main {
+  padding: 28px 0 40px;
+  flex: 1;
+}
+
+.card {
+  background: var(--superficie-branca);
+  border: 1px solid var(--fundo-claro);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+}
+
+.imagem-receita {
+  width: 100%;
+  max-width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--fundo-claro);
+}
+
+/* Layout lateral da capa da receita */
+.cabecalho-receita {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Coluna de titulo e descricao */
+.texto-receita {
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-receita h1 {
+  margin-bottom: 10px;
+}
+
+.texto-receita p {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--azul-medio);
+}
+
+/* Listas */
+ul, ol {
+  line-height: 1.6;
+}
+
+.menu-receitas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu-receitas a {
+  display: block;
+  text-decoration: none;
+  color: var(--azul-escuro);
+  border: 1px solid var(--fundo-claro);
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.menu-receitas a:hover,
+.menu-receitas a.active {
+  background: var(--azul-suave);
+  border-color: var(--azul-medio);
+}
+
+.grade-receitas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card-receita {
+  border: 1px solid var(--fundo-claro);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card-receita-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-receita-imagem {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-receita-conteudo {
+  padding: 12px;
+}
+
+.card-receita-conteudo h2 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.card-receita-conteudo p {
+  margin: 0;
+}
+
+.card-receita:hover {
+  border-color: var(--azul-medio);
+}
+
+footer {
+  border-top: 1px solid var(--azul-claro);
+  padding: 20px 0 30px;
+  color: var(--azul-medio);
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+  .container {
+    width: min(920px, 94%);
+  }
+
+  main {
+    padding: 20px 0 28px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .imagem-receita {
+    max-width: 320px;
+    height: 220px;
+  }
+
+  .grade-receitas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Ajustes para celulares */
+@media (max-width: 480px) {
+  .marca-site {
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .botao-voltar {
+    margin-left: 0;
+  }
+
+  .card {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .cabecalho-receita {
+    flex-direction: column;
+  }
+
+  .imagem-receita {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .grade-receitas {
+    grid-template-columns: 1fr;
+  }
+
+  .card-receita-imagem {
+    height: 180px;
+  }
+
+  .menu-receitas {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  p,
+  li {
+    font-size: 0.96rem;
+  }
+
+  footer {
+    padding: 16px 0 22px;
+    font-size: 0.92rem;
+  }
+}

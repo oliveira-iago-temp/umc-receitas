@@ -1,6 +1,8 @@
 # UMC Receitas
 Projeto simples de receitas culinarias usando HTML, CSS e JavaScript puros.
 
+Link: `https://oliveira-iago-temp.github.io/umc-receitas/`
+
 ## Estrutura de pastas
 - `index.html`
 - `pages/receita.html`
@@ -49,4 +51,3 @@ Cada receita segue este formato:
 
 ## Recursos visuais
 - Paleta de cores definida em variaveis CSS no `styles/style.css`.
-- Comentarios simples no CSS explicando os blocos principais.

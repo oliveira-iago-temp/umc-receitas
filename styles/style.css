@@ -44,11 +44,11 @@ body {
 .marca-site {
   display: flex;
   align-items: center;
-  padding: 14px 0;
+  padding: 8px 0;
 }
 
 .espaco-logo {
-  width: 85px;
+  width: 105px;
   object-fit: contain;
 }
 
